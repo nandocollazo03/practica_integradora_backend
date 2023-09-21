@@ -1,0 +1,47 @@
+[
+    {
+      "id": 1,
+      "title": "Smartphone Galaxy S22",
+      "description": "Potente smartphone con cámara de alta resolución y rendimiento excepcional.",
+      "price": 799.99,
+      "thumbnail": "galaxy-s22.jpg",
+      "code": "GS22",
+      "stock": 100
+    },
+    {
+      "id": 2,
+      "title": "Laptop Ultrabook XPS 13",
+      "description": "Portátil ultraligero con pantalla táctil de alta definición y procesador de última generación.",
+      "price": 1299.99,
+      "thumbnail": "xps-13.jpg",
+      "code": "XPS13",
+      "stock": 50
+    },
+    {
+      "id": 3,
+      "title": "Auriculares Inalámbricos AirBuds Pro",
+      "description": "Auriculares inalámbricos con cancelación de ruido y calidad de sonido premium.",
+      "price": 199.99,
+      "thumbnail": "airbuds-pro.jpg",
+      "code": "ABP",
+      "stock": 75
+    },
+    {
+      "id": 4,
+      "title": "Televisor 4K Ultra HD 55\"",
+      "description": "Televisor con resolución 4K, tecnología HDR y pantalla de gran tamaño.",
+      "price": 899.99,
+      "thumbnail": "tv-4k-55.jpg",
+      "code": "TV4K55",
+      "stock": 30
+    },
+    {
+      "id": 5,
+      "title": "Cámara Mirrorless Alpha 7R IV",
+      "description": "Cámara sin espejo de alta gama con sensor de alta resolución y calidad de imagen excepcional.",
+      "price": 2499.99,
+      "thumbnail": "alpha-7r-iv.jpg",
+      "code": "A7RIV",
+      "stock": 15
+    }
+  ]

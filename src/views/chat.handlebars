@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chat</title>
+</head>
+
+<body>
+    <h1>Chat</h1>
+    <div id="chat-container">
+        <div id="messages">
+
+        </div>
+        <div id="message-input">
+            <input type="text" id="user" placeholder="Nombre de usuario">
+            <input type="text" id="message" placeholder="Escribe un mensaje">
+            <button id="send-button">Enviar</button>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        const userInputElement = document.getElementById('user');
+        const messageInputElement = document.getElementById('message');
+        const sendButton = document.getElementById('send-button');
+        const messagesContainer = document.getElementById('messages');
+
+        sendButton.addEventListener('click', () => {
+            const user = userInputElement.value;
+            const message = messageInputElement.value;
+            if (user && message) {
+                socket.emit('newMessage', { user, message });
+                messageInputElement.value = '';
+            }
+        });
+
+        socket.on('updateMessages', (messages) => {
+            messagesContainer.innerHTML = '';
+            messages.forEach((message) => {
+                const messageElement = document.createElement('div');
+                messageElement.innerText = `${message.user}: ${message.message}`;
+                messagesContainer.appendChild(messageElement);
+            });
+        });
+    </script>
+</body>
+</html>
